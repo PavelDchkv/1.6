@@ -1,0 +1,10 @@
+.body-page {
+    font-family: $font-family;
+    color: $color-text;
+    background-color: $color-background;
+    font-size: 14px;
+
+    &--overflow-hidden {
+        overflow: hidden;
+    }
+}

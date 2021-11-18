@@ -1,0 +1,73 @@
+.footer {
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: $color-title;
+    opacity: 0.72;
+
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-top: 1px solid $color-border;
+
+    @media (min-width: $screen-tablet) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    @media (min-width: $screen-desktop-wide) {
+        max-width: 1120px;
+        margin-left: auto;
+    }
+
+    &__team {
+        margin-top: 16px;
+
+        @media (min-width: $screen-tablet) {
+            text-align: left;
+            margin-left: 24px;
+            margin-top: 32px;
+            max-width: 220px;
+        }
+
+        @media (min-width: $screen-desktop) {
+            margin-left: 31px;
+        }
+    }
+
+    &__privacy-policy {
+        margin: 16px 0;
+
+        @media (min-width: $screen-tablet) {
+            margin: 32px 0;
+        }
+    }
+
+    &__public-offer {;
+        @media (min-width: $screen-tablet) {
+            text-align: right;
+            max-width: 220px;
+            margin-right: 24px;
+            margin-top: 32px;
+        }
+
+        @media (min-width: $screen-desktop) {
+            max-width: 330px;
+            margin-right: 33px;
+        }
+    }
+
+    &__link {
+        color: inherit;
+        text-decoration: underline;
+
+        &:hover {
+            color: black;
+            opacity: 1;
+            text-decoration: underline;
+            text-decoration-color: $color-main;
+        }
+    }
+}

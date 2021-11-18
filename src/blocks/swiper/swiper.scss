@@ -1,0 +1,26 @@
+.swiper-slide:hover {
+    .page-content__button-swiper {
+        border: none;
+        background-color: rgba(255, 62, 121, 0.15);
+    }
+
+    .prices-swiper__button-order {
+        background-color: rgba(255, 62, 121, 0.10);
+        border: 2px solid $color-main;
+    }
+
+    .prices-swiper__button-text {
+        color: $color-main;
+    }
+}
+
+.swiper-pagination {
+    bottom: 24px;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #B5B6BC;
+}
+

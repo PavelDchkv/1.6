@@ -1,17 +1,21 @@
-$bgColor: #24292e;
-$text: #fff;
+@import "normalize";
+@import "variables";
+@import "fonts";
 
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
+@import "../blocks/body-page/body-page";
+@import "../blocks/page/page";
+@import "../blocks/background-blur/background-blur";
+@import "../blocks/button/button";
+@import "../blocks/modal/modal";
+@import "../blocks/vertical-menu/vertical-menu";
+@import "../blocks/page-content/page-content";
+@import "../blocks/header/header";
+@import "../blocks/info-block/info-block";
+@import "../blocks/swiper/swiper";
+@import "../blocks/brand-swiper/brand-swiper";
+@import "../blocks/technics-swiper/technics-swiper";
+@import "../blocks/prices/prices";
+@import "../blocks/prices-swiper/prices-swiper";
+@import "../blocks/footer/footer";
 
-body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
-}
+

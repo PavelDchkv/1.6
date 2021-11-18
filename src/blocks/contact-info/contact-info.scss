@@ -1,0 +1,58 @@
+.contact-info {
+    &__phone {
+        color: $color-text;
+        display: block;
+        margin-top: 12px;
+        margin-left: 24px;
+
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.6px;
+
+        &:hover {
+            color: $color-main;
+        }
+    }
+
+    &__mail {
+        color: $color-text;
+        display: block;
+        margin-left: 24px;
+        margin-top: 16px;
+
+        &:hover {
+            color: $color-main;
+        }
+    }
+
+    &__radio-form {
+        padding-top: 40px;
+        padding-left: 24px;
+    }
+
+    &__radio {
+        margin-right: 7px;
+    }
+
+    &__radio-span {
+        cursor: pointer;
+
+        &:hover {
+            color: $color-main;
+        }
+    }
+
+    &__radio-input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+    }
+
+}
+
+input:checked + .contact-info__radio-span {
+    color: #7E7E82;
+}

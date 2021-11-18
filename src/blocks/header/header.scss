@@ -1,0 +1,100 @@
+.header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 88px;
+    border-bottom: 1px solid $color-border;
+    padding: 0 16px;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+
+    @media (min-width: $screen-tablet) {
+        padding-left: 24px;
+        padding-right: 40px;
+    }
+
+    @media (min-width: $screen-desktop-wide) {
+        visibility: hidden;
+        position: static;
+    }
+
+    &__left-side, &__right-side {
+        display: flex;
+        align-items: center;
+    }
+
+    &__divider {
+        display: inline-block;
+        content: "";
+        background-color: #EAEAEA;
+        border-radius: 2px;
+        width: 2px;
+        height: 32px;
+        margin-right: 20px;
+
+        &--left {
+            display: none;
+
+            @media (min-width: $screen-tablet) {
+                display: block;
+            }
+        }
+
+        &--right {
+            @media (min-width: $screen-desktop-wide) {
+                margin-left: 4px;
+            }
+        }
+    }
+
+    &__button {
+        margin-right: 16px;
+
+        &--visible {
+            @media (min-width: $screen-desktop-wide) {
+                visibility: visible;
+                position: relative;
+                margin-right: 160px;
+                margin-top: 42px;
+            }
+        }
+
+        &--last {
+            margin-right: 0;
+            @media (min-width: $screen-desktop-wide) {
+                margin-right: 0;
+            }
+        }
+
+        &--dn {
+            display: none;
+
+            @media (min-width: $screen-tablet) {
+                display: flex;
+            }
+        }
+    }
+
+    &__logo {
+        width: 96.5px;
+        height: 51px;
+    }
+
+    &__text {
+        display: none;
+
+        @media (min-width: $screen-desktop-wide) {
+            display: inline-block;
+            white-space: nowrap;
+            letter-spacing: -0.2px;
+            font-size: 16px;
+            font-weight: 500;
+            position: absolute;
+            right: 48px;
+        }
+    }
+}
+

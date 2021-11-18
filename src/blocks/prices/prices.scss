@@ -1,0 +1,40 @@
+.prices {
+    &__vat-info {
+        font-size: 14px;
+        max-width: 422px;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+        margin: 32px 0 16px 32px;
+    }
+
+    &__button-offer {
+        background-color: #F8F8F8;
+        margin-left: 32px;
+        margin-bottom: 50px;
+        padding-right: 15px;
+        text-align: left;
+    }
+
+    &__offer-text {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        font-weight: 500;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: -13px;
+            bottom: 3.5px;
+            width: 7px;
+            height: 11px;
+            background-image: url("../img/arrow-button-offer.svg");
+            background-repeat: no-repeat;
+        }
+
+        &:hover {
+            color: $color-main;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+.nav-vertical {
+    &__list {
+        width: 100%;
+    }
+
+    &__item {
+        padding: 4px 0 4px 24px;
+        margin-bottom: 24px;
+    }
+
+    &__link {
+        color: #1B1C21;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        font-weight: 500;
+        position: relative;
+
+        &:focus {
+            color: rgba(126, 126, 130, 0.9);
+
+            &::before {
+                position: absolute;
+                left: -24px;
+                top: -4px;
+                content: "";
+                width: 4px;
+                height: 32px;
+                background-color: $color-before;
+                border-radius: 2px;
+            }
+        }
+
+        &:hover:not(:focus) {
+            color: $color-main;
+
+            &::before {
+                position: absolute;
+                left: -24px;
+                top: -4px;
+                content: "";
+                width: 3px;
+                height: 32px;
+                background-color: rgba(255, 62, 121, 0.25);
+                border-radius: 2px;
+            }
+        }
+    }
+}
