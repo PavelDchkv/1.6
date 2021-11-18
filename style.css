@@ -1147,8 +1147,10 @@ input:checked + .contact-info__radio-span {
     line-height: 18px;
     font-size: 14px;
     letter-spacing: 0.2px;
+    height: auto;
     max-height: 90px;
-    overflow: hidden; }
+    overflow: hidden;
+    transition: max-height 0.5s; }
     @media (min-width: 768px) {
       .info-block__text {
         padding-right: 48px;
