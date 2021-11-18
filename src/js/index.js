@@ -19,7 +19,7 @@ let brandSwiperButton = new ButtonShowMore('.brand-swiper__wrapper', '.page-cont
 let technicsSwiperButton = new ButtonShowMore('.technics-swiper__wrapper', '.page-content__button-showmore--technics',
     '.page-content__button-showmore-text--technics', '.technics-swiper');
 let infoButton = new ButtonShowMore('.info-block__text', '.page-content__button-showmore--info',
-    '.page-content__button-showmore-text--info', '.info-block__text');
+    '.page-content__button-showmore-text--info', '.info-block__text', 'Читать далее');
 
 function swiperMode() {
     let mobile = window.matchMedia('(max-width: 767.5px)');

@@ -3,7 +3,7 @@
 import {isOverflowed, buttonListener} from "./functions";
 
 export class ButtonShowMore {
-    constructor(blockSelector, buttonSelector, textSelector, swiperSelector) {
+    constructor(blockSelector, buttonSelector, textSelector, swiperSelector, text='Показать все') {
         this.block = document.querySelector(blockSelector);
         this.button = document.querySelector(buttonSelector);
         this.text = this.button.querySelector(textSelector);
@@ -12,6 +12,7 @@ export class ButtonShowMore {
 
         this.parameters = {
             isActiveButton: false,
+            text: text,
         }
     }
 

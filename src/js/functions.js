@@ -13,7 +13,7 @@ export function buttonListener(button) {
     } else {
         button.block.classList.remove('page-content--max-height');
         button.parameters.isActiveButton = false;
-        button.text.textContent = 'Показать все';
+        button.text.textContent = button.parameters.text;
         button.button.classList.remove('rotate');
     }
 }
