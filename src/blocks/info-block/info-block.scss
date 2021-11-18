@@ -73,8 +73,11 @@
         line-height: 18px;
         font-size: 14px;
         letter-spacing: 0.2px;
+        height: auto;
         max-height: 90px;
         overflow: hidden;
+
+        transition: max-height 0.5s;
 
         @media (min-width: $screen-tablet) {
             padding-right: 48px;
