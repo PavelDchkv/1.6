@@ -12,6 +12,7 @@
 
         &:hover {
             color: $color-main;
+            transition: 0.15s;
         }
     }
 
@@ -23,23 +24,35 @@
 
         &:hover {
             color: $color-main;
+            transition: 0.15s;
         }
     }
 
-    &__radio-form {
+    &__language-change {
         padding-top: 40px;
         padding-left: 24px;
     }
 
-    &__radio {
+    &__button {
         margin-right: 7px;
+        border: none;
+        outline: none;
+        background-color: white;
+
+        &:focus .contact-info__button-span {
+            color: #7E7E82;
+        }
     }
 
-    &__radio-span {
+    &__button-span {
         cursor: pointer;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
 
         &:hover {
             color: $color-main;
+            transition: 0.15s;
         }
     }
 

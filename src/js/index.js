@@ -74,11 +74,10 @@ window.addEventListener('resize', function() {
     infoButton.showButton();
 });
 
-
 let backgroundBlur = document.querySelector('.background-blur');
 
 let menuButton = new DropDownBlock('.header__button--menu', '.vertical-menu__button--close-menu',
-    '.vertical-menu', 'vertical-menu--display-flex', backgroundBlur);
+    '.vertical-menu', 'vertical-menu--animation', backgroundBlur);
 menuButton.addListener();
 
 let backgroundBlurZIndex = document.querySelector('.background-blur--more-z-index');
@@ -87,12 +86,13 @@ let feedBackButtons = ['.vertical-menu__button--feedback', '.header__button--fee
 
 callButtons.forEach((callButton) => {
     let button = new DropDownBlock(callButton, '.modal__close-button--call',
-        '.modal__call', 'modal__call--display-block', backgroundBlurZIndex);
+        '.modal--call', 'modal--animation', backgroundBlurZIndex, true);
     button.addListener();
 });
 
 feedBackButtons.forEach((feedBackButton) => {
     let button = new DropDownBlock(feedBackButton, '.modal__close-button--feedback',
-        '.modal__feedback', 'modal__feedback--display-block', backgroundBlurZIndex);
+        '.modal--feedback', 'modal--animation', backgroundBlurZIndex, true);
     button.addListener();
 });
+

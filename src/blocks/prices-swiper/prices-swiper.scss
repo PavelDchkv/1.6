@@ -158,6 +158,8 @@
             &--service {
                 width: 355px;
                 margin-right: auto;
+                margin-top: auto;
+                margin-bottom: auto;
             }
 
             &--price {
@@ -186,6 +188,17 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 16px 0 12px;
+
+        &:hover {
+            background-color: rgba(255, 62, 121, 0.15);
+            border: 2px solid $color-main;
+            transition: 0.3s;
+
+            & .prices-swiper__button-text {
+                color: $color-main;
+                transition: 0.3s;
+            }
+        }
     }
 
     &__button-text {
@@ -196,7 +209,6 @@
         text-transform: uppercase;
         color: #FFFFFF;
         font-weight: 500;
-
     }
 
     &__pagination {

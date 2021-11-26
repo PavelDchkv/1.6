@@ -2,7 +2,7 @@
 @import "../contact-info/contact-info";
 
 .vertical-menu {
-    display: none;
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
@@ -15,18 +15,20 @@
     color: #1B1C21;
 
     position: fixed;
-    left: 0;
+    opacity: 0;
+    left: -100%;
     top: 0;
     z-index: 20;
     background-color: white;
+    transition: 1s;
 
     @media (min-width: $screen-tablet) {
         width: 320px;
     }
 
     @media (min-width: $screen-desktop-wide) {
-        display: flex;
         box-shadow: none;
+        opacity: 1;
         left: unquote('calc((100vw - 1440px)/2)');
     }
 
@@ -81,8 +83,10 @@
         width: 100%;
     }
 
-    &--display-flex {
-        display: flex;
+    &--animation {
+        opacity: 1;
+        left: 0;
+        transition: 1s;
     }
 }
 

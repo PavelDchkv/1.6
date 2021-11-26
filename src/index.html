@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="keywords" content="CPS">
     <meta name="description" content="1.6 task">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>1.6 CPS</title>
 </head>
@@ -15,15 +15,17 @@
                 <button type="button" class="vertical-menu__button vertical-menu__button--close-menu button">
                     <img src="img/close-menu.svg" alt="close-menu">
                 </button>
-                <img class="vertical-menu__logo" src="img/Group.svg" alt="logo">
+                <a class="vertical-menu__link-logo" href="#">
+                    <img class="vertical-menu__logo" src="img/Group.svg" alt="logo">
+                </a>
                 <button type="button" class="vertical-menu__button vertical-menu__button--right-side button">
                     <img src="img/search.svg" alt="check status">
                 </button>
             </header>
-            <nav class="vertical-menu__nav nav-vetical">
+            <nav class="vertical-menu__nav nav-vertical">
                 <ul class="nav-vertical__list">
                     <li class="nav-vertical__item">
-                        <a class="nav-vertical__link" href="#" autofocus>Ремонтируемые устройства</a>
+                        <a class="nav-vertical__link" href="#">Ремонтируемые устройства</a>
                     </li>
                     <li class="nav-vertical__item">
                         <a class="nav-vertical__link" href="#">Ремонтируемые бренды</a>
@@ -56,20 +58,17 @@
                 </section>
                 <section class="vertical-menu__contact-info contact-info">
                     <a class="contact-info__mail" href="mailto:mail@cps.com">mail@cps.com</a>
-                    <a class="contact-info__phone" href="tel: 88008908900">8 800 890 8900</a>
-                    <div class="contact-info__radio-form">
-                        <label class="contact-info__radio">
-                            <input class="contact-info__radio-input" type="radio" value="RU" name="lang" checked>
-                            <span class="contact-info__radio-span">RU</span>
-                        </label>
-                        <label class="contact-info__radio">
-                            <input class="contact-info__radio-input" type="radio" value="EN" name="lang">
-                            <span class="contact-info__radio-span">EN</span>
-                        </label>
-                        <label class="contact-info__radio">
-                            <input class="contact-info__radio-input" type="radio" value="CH" name="lang">
-                            <span class="contact-info__radio-span">CH</span>
-                        </label>
+                    <a class="contact-info__phone" href="tel:88008908900">8 800 890 8900</a>
+                    <div class="contact-info__language-change">
+                        <button type="button" class="contact-info__button contact-info__button--RU">
+                            <span class="contact-info__button-span">RU</span>
+                        </button>
+                        <button type="button" class="contact-info__button contact-info__button--EN">
+                            <span class="contact-info__button-span">EN</span>
+                        </button>
+                        <button type="button" class="contact-info__button contact-info__button--CH">
+                            <span class="contact-info__button-span">CH</span>
+                        </button>
                     </div>
                 </section>
             </footer>
@@ -80,8 +79,9 @@
                 <button type="button" class="header__button header__button--menu button">
                     <img src="./img/burger-menu.svg" alt="menu">
                 </button>
-                <div class="header__divider header__divider--left"></div>
-                <img class="header__logo" src="./img/logo.svg" alt="logo SPS">
+                <a class='header__link-logo' href="#">
+                    <img class="header__logo" src="./img/logo.svg" alt="logo SPS">
+                </a>
             </div>
 
             <div class="header__right-side">
@@ -95,14 +95,10 @@
                     <img src="./img/profile.svg" alt="profile button">
                 </button>
 
-                <div class="header__divider header__divider--right"></div>
-
-                <button type="button" class="header__button button header__button--visible">
-                    <span class="header__text">Оставить заявку</span>
-                        <img src="./img/repair.svg" alt="repair button">
-                    </button>
-                    <button type="button" class="header__button header__button--last button header__button--visible">
-                        <span class="header__text">Статус ремонта</span>
+                <button type="button" class="header__button header__button--repair button">
+                    <img src="./img/repair.svg" alt="repair button">
+                </button>
+                <button type="button" class="header__button header__button--last button">
                     <img src="./img/checkstatus.svg" alt="check status button">
                 </button>
             </div>
@@ -112,6 +108,15 @@
             <section class="info-block">
                 <section class="info-block__header">
                     <h1 class="info-block__title">Услуги и сервисы</h1>
+
+                    <button type="button" class="info-block__button info-block__button--check-status">
+                        <span class="info-block__text-button">Статус ремонта</span>
+                    </button>
+                    <button type="button" class="info-block__button info-block__button--repair">
+                        <span class="info-block__text-button">Оставить заявку</span>
+                    </button>
+
+
                     <nav class="info-block__nav nav">
                         <ul class="nav__list">
                             <li class="nav__item">
@@ -154,7 +159,7 @@
                         </button>
                     </div>
                     <div class="info-block__img-wrap">
-                        <img class="info-block__img" src="./img/CPS.png">
+                        <img class="info-block__img" src="./img/CPS.png" alt="">
                     </div>
                 </section>
             </section>
@@ -238,25 +243,25 @@
                     <div class="technics-swiper__wrapper swiper-wrapper">
                         <div class="technics-swiper__slide swiper-slide">
                             <span class="technics-swiper__text">Ремонт ноутбуков</span>
-                            <button type="button" class="page-content__button-swiper technics-swiper__button brand-swiper__button--laptop">
+                            <button type="button" class="page-content__button-swiper technics-swiper__button technics-swiper__button--laptop">
                                 <img src="img/arrow-button.svg" alt="">
                             </button>
                         </div>
                         <div class="technics-swiper__slide swiper-slide">
                             <span class="technics-swiper__text">Ремонт планшетов</span>
-                            <button type="button" class="page-content__button-swiper technics-swiper__button brand-swiper__button--tablet">
+                            <button type="button" class="page-content__button-swiper technics-swiper__button technics-swiper__button--tablet">
                                 <img src="img/arrow-button.svg" alt="">
                             </button>
                         </div>
                         <div class="technics-swiper__slide swiper-slide">
                             <span class="technics-swiper__text">Ремонт ПК</span>
-                            <button type="button" class="page-content__button-swiper technics-swiper__button brand-swiper__button--pc">
+                            <button type="button" class="page-content__button-swiper technics-swiper__button technics-swiper__button--pc">
                                 <img src="img/arrow-button.svg" alt="">
                             </button>
                         </div>
                         <div class="technics-swiper__slide swiper-slide">
                             <span class="technics-swiper__text">Ремонт мониторов</span>
-                            <button type="button" class="page-content__button-swiper technics-swiper__button brand-swiper__button--monitor">
+                            <button type="button" class="page-content__button-swiper technics-swiper__button technics-swiper__button--monitor">
                                 <img src="img/arrow-button.svg" alt="">
                             </button>
                         </div>
@@ -285,7 +290,7 @@
                             <span class="prices-swiper__text prices-swiper__text--price">Бесплатно</span>
                             <h3 class="prices-swiper__title">Срок</h3>
                             <span class="prices-swiper__text prices-swiper__text--time">30 мин</span>
-                            <button type="button" class="prices-swiper__button-order button-order--">
+                            <button type="button" class="prices-swiper__button-order">
                                 <span class="prices-swiper__button-text">Заказать</span>
                                 <img src="img/arrow-button-white.svg" alt="">
                             </button>
@@ -297,7 +302,7 @@
                             <span class="prices-swiper__text prices-swiper__text--price">1000 &#8381;</span>
                             <h3 class="prices-swiper__title">Срок</h3>
                             <span class="prices-swiper__text prices-swiper__text--time">30-120 мин</span>
-                            <button type="button" class="prices-swiper__button-order button-order--">
+                            <button type="button" class="prices-swiper__button-order">
                                 <span class="prices-swiper__button-text">Заказать</span>
                                 <img src="img/arrow-button-white.svg" alt="">
                             </button>
@@ -309,7 +314,7 @@
                             <span class="prices-swiper__text prices-swiper__text--price">1000 &#8381;</span>
                             <h3 class="prices-swiper__title">Срок</h3>
                             <span class="prices-swiper__text prices-swiper__text--time">30-120 мин</span>
-                            <button type="button" class="prices-swiper__button-order button-order--">
+                            <button type="button" class="prices-swiper__button-order">
                                 <span class="prices-swiper__button-text">Заказать</span>
                                 <img src="img/arrow-button-white.svg" alt="">
                             </button>
@@ -321,7 +326,7 @@
                             <span class="prices-swiper__text prices-swiper__text--price">1000 &#8381;</span>
                             <h3 class="prices-swiper__title">Срок</h3>
                             <span class="prices-swiper__text prices-swiper__text--time">30-120 мин</span>
-                            <button type="button" class="prices-swiper__button-order button-order--">
+                            <button type="button" class="prices-swiper__button-order">
                                 <span class="prices-swiper__button-text">Заказать</span>
                                 <img src="img/arrow-button-white.svg" alt="">
                             </button>
@@ -333,7 +338,7 @@
                             <span class="prices-swiper__text prices-swiper__text--price">1000 &#8381;</span>
                             <h3 class="prices-swiper__title">Срок</h3>
                             <span class="prices-swiper__text prices-swiper__text--time">30-120 мин</span>
-                            <button type="button" class="prices-swiper__button-order button-order--">
+                            <button type="button" class="prices-swiper__button-order">
                                 <span class="prices-swiper__button-text">Заказать</span>
                                 <img src="img/arrow-button-white.svg" alt="">
                             </button>
@@ -370,16 +375,16 @@
     <div class="background-blur"></div>
     <div class="background-blur background-blur--more-z-index"></div>
 
-    <div class="modal modal__feedback">
+    <div class="modal modal--feedback">
         <button class="modal__close-button modal__close-button--feedback button" type="button">
             <img src="img/close-menu.svg" alt="close-feedback">
         </button>
         <h2 class="modal__title">Обратная связь</h2>
         <form class="modal__form" action="#" method="post">
-            <input class="modal__form--item modal__user-name modal__user-name--feedback" type="text" name="userName" placeholder="Имя">
-            <input class="modal__form--item modal__tel modal__tel--feedback" type="tel" name="tel" placeholder="Телефон">
-            <input class="modal__form--item modal__email modal__email--feedback" type="email" name="email" placeholder="Электронная почта">
-            <textarea class="modal__form--item modal__message" name="message" placeholder="Сообщение"></textarea>
+            <input class="modal__item modal__user-name modal__user-name--feedback" type="text" name="userName" placeholder="Имя">
+            <input class="modal__item modal__tel modal__tel--feedback" type="tel" name="tel" placeholder="Телефон">
+            <input class="modal__item modal__email modal__email--feedback" type="email" name="email" placeholder="Электронная почта">
+            <textarea class="modal__item modal__message" name="message" placeholder="Сообщение"></textarea>
 
             <p class="modal__info">Нажимая “отправить”, вы даете согласие на
                 <a href="#" class="modal__link">обработку персональных данных</a> и соглашаетесь с нашей
@@ -391,13 +396,14 @@
             </button>
         </form>
     </div>
-    <div class="modal modal__call">
+
+    <div class="modal modal--call">
         <button class="modal__close-button modal__close-button--call button" type="button">
             <img src="img/close-menu.svg" alt="close-call">
         </button>
         <h2 class="modal__title">Заказать звонок</h2>
         <form class="modal__form" action="#" method="post">
-            <input class="modal__form--item modal__tel modal__tel--call" type="tel" name="tel" placeholder="Телефон">
+            <input class="modal__item modal__tel modal__tel--call" type="tel" name="tel" placeholder="Телефон">
 
             <p class="modal__info">Нажимая “отправить”, вы даете согласие на
                 <a href="#" class="modal__link">обработку персональных данных</a> и соглашаетесь с нашей

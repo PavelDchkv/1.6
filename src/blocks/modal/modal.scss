@@ -1,28 +1,17 @@
 .modal {
-    display: none;
+    display: block;
     position: fixed;
-    right: 0;
+    right: -100%;
     top: 0;
     min-height: 100%;
     width: 100%;
     z-index: 30;
     background: #FFFFFF;
-
+    opacity: 0;
+    transition: 1s;
     @media (min-width: $screen-tablet) {
         width: 440px;
         box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
-    }
-
-    &__feedback {
-        &--display-block {
-            display: block;
-        }
-    }
-
-    &__call {
-        &--display-block {
-            display: block;
-        }
     }
 
     &__close-button {
@@ -30,7 +19,7 @@
         margin-left: 16px;
 
         @media (min-width: $screen-tablet) {
-            position: fixed;
+            position: absolute;
             margin: 0;
             right: 472px;
             top: 32px;
@@ -71,28 +60,26 @@
         }
     }
 
-    &__form {
-        &--item {
-            display: block;
-            margin: 16px;
-            height: 48px;
-            min-width: 288px;
-            width: 60%;
-            font-size: 16px;
-            line-height: 24px;
-            letter-spacing: -0.2px;
-            color: #B5B6BC;
+    &__item {
+        display: block;
+        margin: 16px;
+        height: 48px;
+        min-width: 288px;
+        width: 60%;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: #B5B6BC;
 
-            border-radius: 8px;
-            border: 1px solid #EAEAEA;
+        border-radius: 8px;
+        border: 1px solid #EAEAEA;
 
-            padding-left: 16px;
+        padding-left: 16px;
 
-            @media (min-width: $screen-tablet) {
-                min-width: 376px;
-                margin-right: 32px;
-                margin-left: 32px;
-            }
+        @media (min-width: $screen-tablet) {
+            min-width: 376px;
+            margin-right: 32px;
+            margin-left: 32px;
         }
     }
 
@@ -142,6 +129,7 @@
 
         &:hover {
             background-color: #1B1C21;
+            transition: 0.15s;
         }
     }
 
@@ -153,5 +141,10 @@
         text-transform: uppercase;
         color: #FFFFFF;
     }
-}
 
+    &--animation {
+        right: 0;
+        opacity: 1;
+        transition: 1s;
+    }
+}
