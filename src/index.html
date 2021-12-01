@@ -76,31 +76,39 @@
 
         <header class="header">
             <div class="header__left-side">
-                <button type="button" class="header__button header__button--menu button">
-                    <img src="./img/burger-menu.svg" alt="menu">
-                </button>
-                <a class='header__link-logo' href="#">
-                    <img class="header__logo" src="./img/logo.svg" alt="logo SPS">
-                </a>
+                <div class="header__ls-first-block">
+                    <button type="button" class="header__button header__button--menu button">
+                        <img src="./img/burger-menu.svg" alt="menu">
+                    </button>
+                </div>
+                <div class="header__ls-second-block">
+                    <a class='header__link-logo' href="#">
+                        <img class="header__logo" src="./img/logo.svg" alt="logo SPS">
+                    </a>
+                </div>
             </div>
 
             <div class="header__right-side">
-                <button type="button" class="header__button header__button--call header__button--dn button">
-                    <img src="./img/call.svg" alt="call button">
-                </button>
-                <button type="button" class="header__button header__button--feedback header__button--dn  button">
-                    <img src="./img/message.svg" alt="message button">
-                </button>
-                <button type="button" class="header__button header__button--dn button">
-                    <img src="./img/profile.svg" alt="profile button">
-                </button>
+                <div class="header__rs-first-block">
+                    <button type="button" class="header__button header__button--call header__button--dn button">
+                        <img src="./img/call.svg" alt="call button">
+                    </button>
+                    <button type="button" class="header__button header__button--feedback header__button--dn  button">
+                        <img src="./img/message.svg" alt="message button">
+                    </button>
+                    <button type="button" class="header__button header__button--dn button">
+                        <img src="./img/profile.svg" alt="profile button">
+                    </button>
+                </div>
 
-                <button type="button" class="header__button header__button--repair button">
-                    <img src="./img/repair.svg" alt="repair button">
-                </button>
-                <button type="button" class="header__button header__button--last button">
-                    <img src="./img/checkstatus.svg" alt="check status button">
-                </button>
+                <div class="header__rs-second-block">
+                    <button type="button" class="header__button header__button--repair button">
+                        <img src="./img/repair.svg" alt="repair button">
+                    </button>
+                    <button type="button" class="header__button header__button--last button">
+                        <img src="./img/checkstatus.svg" alt="check status button">
+                    </button>
+                </div>
             </div>
         </header>
 
@@ -109,12 +117,16 @@
                 <section class="info-block__header">
                     <h1 class="info-block__title">Услуги и сервисы</h1>
 
-                    <button type="button" class="info-block__button info-block__button--check-status">
-                        <span class="info-block__text-button">Статус ремонта</span>
-                    </button>
-                    <button type="button" class="info-block__button info-block__button--repair">
-                        <span class="info-block__text-button">Оставить заявку</span>
-                    </button>
+                    <div class="info-block__buttons-wrapper">
+                        <button type="button" class="info-block__button info-block__button--repair">
+                            <span class="info-block__text-button">Оставить заявку</span>
+                            <img class="info-block__picture-button" src="img/repair-full.svg">
+                        </button>
+                        <button type="button" class="info-block__button info-block__button--check-status">
+                            <span class="info-block__text-button">Статус ремонта</span>
+                            <img class="info-block__picture-button" src="img/checkstatus-full.svg">
+                        </button>
+                    </div>
 
 
                     <nav class="info-block__nav nav">

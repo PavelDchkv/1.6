@@ -12,7 +12,7 @@
 
         &:hover {
             color: $color-main;
-            transition: 0.15s;
+            transition: 0.2s;
         }
     }
 
@@ -24,7 +24,7 @@
 
         &:hover {
             color: $color-main;
-            transition: 0.15s;
+            transition: 0.2s;
         }
     }
 
@@ -38,13 +38,6 @@
         border: none;
         outline: none;
         background-color: white;
-
-        &:focus .contact-info__button-span {
-            color: #7E7E82;
-        }
-    }
-
-    &__button-span {
         cursor: pointer;
         font-size: 16px;
         line-height: 24px;
@@ -52,7 +45,12 @@
 
         &:hover {
             color: $color-main;
-            transition: 0.15s;
+            transition: 0.2s;
+        }
+
+        &:focus .contact-info__button-span {
+            color: #7E7E82;
+            transition: 0.2s;
         }
     }
 
@@ -68,4 +66,5 @@
 
 input:checked + .contact-info__radio-span {
     color: #7E7E82;
+    transition: 0.2s;
 }

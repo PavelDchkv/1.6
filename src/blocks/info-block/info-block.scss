@@ -25,15 +25,25 @@
         }
     }
 
+
+    &__buttons-wrapper {
+        display: none;
+
+        @media (min-width: $screen-desktop-wide) {
+            display: flex;
+            float: right;
+            margin-right: 8px;
+        }
+    }
+
     &__button {
         display: none;
 
         @media (min-width: $screen-desktop-wide) {
-            display: block;
+            display: flex;
+            align-items: center;
             position: relative;
-            float: right;
-            margin-right: 80px;
-            margin-top: 8px;
+            margin-right: 32px;
             background-color: $color-background;
 
             &:hover {
@@ -42,28 +52,15 @@
                 transition-duration: 0.3s;
             }
 
-            &::before {
-                content: '';
-                position: absolute;
-                right: -48px;
-                top: -12px;
-                height: 40px;
-                width: 40px;
-                border-radius: 50%;
-                background-color: $color-main;
-                background-repeat: no-repeat;
-                background-position: center;
-            }
-
-            &--check-status::before {
-                background-image: url("../img/checkstatus.svg");
-
-            }
-
-            &--repair::before {
-                background-image: url("../img/repair.svg");
+            &--check-status {
+                margin-right: 0px;
             }
         }
+    }
+
+    &__picture-button {
+        height: 40px;
+        width: 40px;
     }
 
     &__text-button {
@@ -72,6 +69,8 @@
         letter-spacing: -0.2px;
         font-size: 16px;
         font-weight: 500;
+
+        margin-right: 8px;
     }
 
     &__title {
@@ -125,7 +124,7 @@
         max-height: 90px;
         overflow: hidden;
 
-        transition: max-height 0.5s;
+        transition: all linear 0.5s;
 
         @media (min-width: $screen-tablet) {
             padding-right: 48px;

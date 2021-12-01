@@ -192,11 +192,11 @@
         &:hover {
             background-color: rgba(255, 62, 121, 0.15);
             border: 2px solid $color-main;
-            transition: 0.3s;
+            transition: 0.2s;
 
             & .prices-swiper__button-text {
                 color: $color-main;
-                transition: 0.3s;
+                transition: 0.2s;
             }
         }
     }

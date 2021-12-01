@@ -59,13 +59,9 @@
                 width: 8px;
                 height: 10px;
                 left: -17px;
-                top: 6px;
-                transition-duration: 0.5s;
+                top: 4px;
+                transition: all linear 0.5s;
             }
-    }
-
-    &--max-height {
-        max-height: 600px !important;
     }
 }
 

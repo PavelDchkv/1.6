@@ -6,12 +6,12 @@ export function isOverflowed(el) {
 
 export function buttonListener(button) {
     if (!button.parameters.isActiveButton) {
-        button.block.classList.add('page-content--max-height');
+        button.block.style.maxHeight = `${button.block.scrollHeight}px`;
         button.text.textContent = 'Скрыть';
         button.parameters.isActiveButton = true;
         button.button.classList.add('rotate');
     } else {
-        button.block.classList.remove('page-content--max-height');
+        button.block.removeAttribute('style');
         button.parameters.isActiveButton = false;
         button.text.textContent = button.parameters.text;
         button.button.classList.remove('rotate');

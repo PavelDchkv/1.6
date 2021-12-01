@@ -18,6 +18,7 @@
 
         &:focus {
             color: rgba(126, 126, 130, 0.9);
+            transition: 0.2s;
 
             &::before {
                 position: absolute;
@@ -33,6 +34,7 @@
 
         &:hover:not(:focus) {
             color: $color-main;
+            transition: 0.2s;
 
             &::before {
                 position: absolute;
